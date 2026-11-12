@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopeers — AI-Powered B2B eCommerce Analytics Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="brand-wrapper">
+      <div class="brand-icon">S</div>
+      <div class="brand-name">Shopeers</div>
+    </div>
+
+    <div class="nav-group-label">Main Menu</div>
+    <ul class="nav-menu">
+      <li>
+        <a href="#" class="nav-link active">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+          Overview
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+          Analytics & AI
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          B2B Orders
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Wholesale Clients
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          Inventory Sync
+        </a>
+      </li>
+    </ul>
+
+    <div class="nav-group-label">Configuration</div>
+    <ul class="nav-menu">
+      <li>
+        <a href="#" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0 1.82.33V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          System Settings
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="user-avatar-badge">HJ</div>
+      <div style="flex:1;">
+        <div style="font-size:13px; font-weight:600; color:var(--text-heading);">Hashim</div>
+        <div style="font-size:11.5px; color:var(--text-muted);">Creator · @hashim_py</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Viewport -->
+  <main class="main-viewport">
+    <header class="topbar">
+      <div class="search-field">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="searchInput" placeholder="Search orders, SKU, clients...">
+        <span class="kbd-chip">⌘K</span>
+      </div>
+
+      <div class="topbar-right">
+        <div class="date-filter-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Oct 12 – Nov 12, 2026</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+
+        <a href="https://github.com/hashim-work-svg/shopeers-dashboard" class="date-filter-btn" style="text-decoration:none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub Repo
+        </a>
+
+        <button class="btn-primary" onclick="alert('Creating new B2B invoice batch...')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          + Create Order
+        </button>
+      </div>
+    </header>
+
+    <div class="dashboard-container">
+      <div class="page-intro">
+        <div>
+          <h1>eCommerce Intelligence & Orders</h1>
+          <p>Real-time analytics across B2B wholesale channels, SKU turnover, and checkout conversions.</p>
+        </div>
+      </div>
+
+      <!-- KPI Executive Metrics Row -->
+      <section class="kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-card-header">
+            <span>Total Gross Revenue</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </div>
+          <div class="kpi-number" id="kpiRevenue">$148,220.00</div>
+          <div class="kpi-meta">
+            <span class="metric-badge badge-green">↑ +18.4%</span>
+            <span style="color:var(--text-muted);">vs. previous period</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-card-header">
+            <span>Average Order Value (AOV)</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </div>
+          <div class="kpi-number">$324.50</div>
+          <div class="kpi-meta">
+            <span class="metric-badge badge-green">↑ +4.2%</span>
+            <span style="color:var(--text-muted);">across 457 B2B deals</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-card-header">
+            <span>Customer Acquisition Cost</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </div>
+          <div class="kpi-number">$42.10</div>
+          <div class="kpi-meta">
+            <span class="metric-badge badge-green">↓ -8.6%</span>
+            <span style="color:var(--text-muted);">efficiency improved</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-card-header">
+            <span>Checkout Conversion</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </div>
+          <div class="kpi-number">3.84%</div>
+          <div class="kpi-meta">
+            <span class="metric-badge badge-blue">⚡ AI Optimized</span>
+            <span style="color:var(--text-muted);">+0.9% lift</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Center Analytics Visuals -->
+      <section class="analytics-grid">
+        <div class="chart-card">
+          <div class="chart-top-bar">
+            <div class="chart-title-group">
+              <h3>Revenue Growth & Order Velocity</h3>
+              <p>Daily volume tracking across multi-region wholesale channels</p>
+            </div>
+            <div class="chart-switchers">
+              <button class="chart-tab-btn active" onclick="switchMetric('revenue')">Revenue ($)</button>
+              <button class="chart-tab-btn" onclick="switchMetric('orders')">Orders (Qty)</button>
+              <button class="chart-tab-btn" onclick="switchMetric('margin')">Gross Margin</button>
+            </div>
+          </div>
+          <div class="svg-canvas-container">
+            <svg width="100%" height="100%" viewBox="0 0 700 240" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="blueGlow" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#1428ee" stop-opacity="0.18"/>
+                  <stop offset="100%" stop-color="#1428ee" stop-opacity="0.0"/>
+                </linearGradient>
+              </defs>
+              <line x1="40" y1="30" x2="700" y2="30" stroke="#f1f5f9"/>
+              <line x1="40" y1="80" x2="700" y2="80" stroke="#f1f5f9"/>
+              <line x1="40" y1="130" x2="700" y2="130" stroke="#f1f5f9"/>
+              <line x1="40" y1="180" x2="700" y2="180" stroke="#f1f5f9"/>
+              <line x1="40" y1="220" x2="700" y2="220" stroke="#e2e8f0"/>
+
+              <text x="5" y="34" fill="#94a3b8" font-size="10" font-family="sans-serif">$150k</text>
+              <text x="5" y="84" fill="#94a3b8" font-size="10" font-family="sans-serif">$120k</text>
+              <text x="5" y="134" fill="#94a3b8" font-size="10" font-family="sans-serif">$90k</text>
+              <text x="5" y="184" fill="#94a3b8" font-size="10" font-family="sans-serif">$60k</text>
+
+              <path d="M40,160 Q180,140 320,110 T520,70 T700,50" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4"/>
+              <path d="M40,130 Q160,110 280,120 T480,65 T600,45 T700,32 L700,220 L40,220 Z" fill="url(#blueGlow)"/>
+              <path d="M40,130 Q160,110 280,120 T480,65 T600,45 T700,32" fill="none" stroke="#1428ee" stroke-width="3"/>
+              <circle cx="600" cy="45" r="5" fill="#1428ee" stroke="#ffffff" stroke-width="2.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Category Distribution -->
+        <div class="chart-card">
+          <div class="chart-top-bar">
+            <div class="chart-title-group">
+              <h3>Top Channel Share</h3>
+              <p>Volume by wholesale customer type</p>
+            </div>
+          </div>
+
+          <div class="category-item">
+            <div class="category-labels">
+              <span>Direct Enterprise Accounts</span>
+              <span style="font-weight:600; color:var(--text-heading);">$88,400 (59.6%)</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width: 60%;"></div></div>
+          </div>
+
+          <div class="category-item">
+            <div class="category-labels">
+              <span>Authorized Distributors</span>
+              <span style="font-weight:600; color:var(--text-heading);">$42,100 (28.4%)</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width: 28%; background: #38bdf8;"></div></div>
+          </div>
+
+          <div class="category-item">
+            <div class="category-labels">
+              <span>B2B Self-Serve Portal</span>
+              <span style="font-weight:600; color:var(--text-heading);">$17,720 (12.0%)</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width: 12%; background: #10b981;"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Tables & Inventory Flow -->
+      <section class="bottom-grid">
+        <div class="table-module">
+          <div class="table-module-header">
+            <h3>Recent B2B Wholesale Settlements</h3>
+            <span style="font-size:12.5px; color:var(--primary-blue); font-weight:600; cursor:pointer;">View All Orders</span>
+          </div>
+          <table class="clean-table" id="ordersTable">
+            <thead>
+              <tr>
+                <th>Client Company</th>
+                <th>Order ID</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div style="font-weight:600; color:var(--text-heading);">Nordic Retail AS</div>
+                  <div style="font-size:11.5px; color:var(--text-muted);">Stockholm, Sweden</div>
+                </td>
+                <td style="font-family:var(--font-mono); color:var(--text-muted);">#ORD-9941</td>
+                <td><span class="status-pill pill-paid">Paid</span></td>
+                <td style="font-family:var(--font-mono); font-weight:600;">$14,800.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="font-weight:600; color:var(--text-heading);">Solvify Logistics</div>
+                  <div style="font-size:11.5px; color:var(--text-muted);">Melbourne, AU</div>
+                </td>
+                <td style="font-family:var(--font-mono); color:var(--text-muted);">#ORD-9940</td>
+                <td><span class="status-pill pill-paid">Paid</span></td>
+                <td style="font-family:var(--font-mono); font-weight:600;">$8,450.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="font-weight:600; color:var(--text-heading);">Apex Hardware Ltd</div>
+                  <div style="font-size:11.5px; color:var(--text-muted);">London, UK</div>
+                </td>
+                <td style="font-family:var(--font-mono); color:var(--text-muted);">#ORD-9939</td>
+                <td><span class="status-pill pill-pending">Pending</span></td>
+                <td style="font-family:var(--font-mono); font-weight:600;">$22,100.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-module">
+          <div class="table-module-header">
+            <h3>Fastest Turning SKU Inventory</h3>
+            <span style="font-size:12.5px; color:var(--text-muted);">Restock Threshold: 15%</span>
+          </div>
+          <table class="clean-table">
+            <thead>
+              <tr>
+                <th>Product SKU</th>
+                <th>Category</th>
+                <th>Turnover Rate</th>
+                <th>Stock Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div style="font-weight:600; color:var(--text-heading);">Industrial Sensor Mod-4</div>
+                  <div style="font-size:11.5px; color:var(--text-muted);">SKU: IND-SEN-402</div>
+                </td>
+                <td>Hardware IoT</td>
+                <td style="color:var(--success); font-weight:600;">4.8x / mo</td>
+                <td><span style="font-weight:600;">1,420 units</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="font-weight:600; color:var(--text-heading);">Micro-Gateway Router v2</div>
+                  <div style="font-size:11.5px; color:var(--text-muted);">SKU: NET-GW-201</div>
+                </td>
+                <td>Networking</td>
+                <td style="color:var(--success); font-weight:600;">3.9x / mo</td>
+                <td><span style="font-weight:600;">890 units</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="font-weight:600; color:var(--text-heading);">Edge Compute Node X8</div>
+                  <div style="font-size:11.5px; color:var(--text-muted);">SKU: CMP-EDG-800</div>
+                </td>
+                <td>Embedded AI</td>
+                <td style="color:var(--success); font-weight:600;">5.2x / mo</td>
+                <td><span style="font-weight:600;">310 units</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
